@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "59d7c963-fd9e-4822-8fd2-4d642bb276e1",
+		"name": "challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"it125523@drixit.com\",\n    \"password\": \"somePassword2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"login"
+					]
+				},
+				"description": "http://localhost:3001/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"it-drixit-3\",\n    \"avatar\": \"https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png\",\n    \"age\": 35,\n    \"email\": \"it125523@drixit.com\",\n    \"name\": \"IT2\",\n    \"role\": 0,\n    \"surname\": \"Drixit\",\n    \"password\": \"somePassword2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"signup"
+					]
+				},
+				"description": "http://localhost:3001/user/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/user/me/user-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"me",
+						"user-info"
+					]
+				},
+				"description": "http://localhost:3001/user/me/user-info"
+			},
+			"response": []
+		}
+	]
+}

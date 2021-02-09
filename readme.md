@@ -1,16 +1,16 @@
 ## DEVELOPER NOTES:
 To start the solution with docker just place your self in the terminal within folder that contains the project and type
 
-`docker-compose build`
-
+- `docker-compose build`
 and then
-
 `docker-compose run`
 
-to start locally just run in two separate terminals
 
+- to start locally just run in two separate terminals
 `yarn start` on both client & server folders after setting up mongo locally
 
+
+- to Use the postman collection, just use `login-challenge.postman_collection.json` inside postman and import it
 
 ### Solution Notes:
 - Both client & server use typescript & JWT
