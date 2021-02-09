@@ -1,0 +1,35 @@
+version: "2"
+services:
+
+  client:
+    container_name: client
+    build: client/.
+    ports:
+      - 3000:3000
+    volumes:
+      - opt/app/client
+      - /opt/app/client/node_modules
+
+  api:
+    container_name: server
+    build: server/.
+    depends_on:
+      - db
+    ports:
+      - 3001:3001
+    volumes:
+      - opt/app/server
+      - /opt/app/server/node_modules
+    environment:
+      - MONGO_URI=mongodb://database:27017/users
+
+  db:
+    container_name: database
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+
